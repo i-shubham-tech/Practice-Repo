@@ -27,8 +27,11 @@ jobs:
       # - name: Verify formatting
       #   run: deno fmt --check
 
+      - name: install package
+        run: npm ci
+
       - name: Run linter
-        run: deno lint
+        run: npm run lint
 
       - name: Run tests
-        run: deno test -A
+        run: npm run test
